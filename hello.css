@@ -1,0 +1,8 @@
+@charset "UTF-8";
+.box::after {
+    content: 'ここがafter';
+}
+
+#block::after {
+    display: block;
+}
