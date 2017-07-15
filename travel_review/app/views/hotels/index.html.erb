@@ -1,0 +1,18 @@
+<% if !user_signed_in? %>
+<div class="jumbotron">
+  <h1>あなたのお気に入りのホテルの口コミを投稿しよう</h1>
+  <p><%= link_to "会員登録をして口コミを投稿する", new_user_registration_path, class: "btn btn-primary btn-lg" %></p>
+  </div>
+<% end %>
+  
+  
+<div class="row">
+  <% @hotels.each do |hotel| %>
+    <div class="col-sm-6 col-md-3">
+      <div class="thumbnail">
+        <%= link_to (image_tag hotel.image.url(:medium), class: 'image'), hotel %>
+        <%= link_to hotel.title, hotel %>
+      </div>
+    </div>
+  <% end %>  
+</div>

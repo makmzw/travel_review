@@ -1,0 +1,36 @@
+<div class="panel panel-default">
+  <div class="panel-body"
+    <div class="row">
+      <div class="col-md-4">
+        <%= image_tag @hotel.image.url(:medium)  %>
+          <table class="table">
+            <tbody>
+              <tr>
+                <td><strong>Title:</strong></td>
+                <td><%= @hotel.title %></td>
+              </tr>
+               <tr>
+                <td><strong>Description:</strong></td>
+                <td><%= @hotel.description %></td>
+              </tr>  
+               <tr>
+                <td><strong>Address:</strong></td>
+                <td><%= @hotel.address %></td>
+              </tr>  
+               <tr>
+                <td><strong>Service:</strong></td>
+                <td><%= @hotel.service %></td>
+              </tr>  
+               <tr>
+                <td><strong>Rating:</strong></td>
+                <td><%= @hotel.rating %></td>
+              </tr>  
+            </tbody>  
+          </table>
+      </div>
+    </div>
+  </div>
+</div>
+
+<%= link_to 'Edit', edit_hotel_path(@hotel) %> |
+<%= link_to 'Back', hotels_path %>
