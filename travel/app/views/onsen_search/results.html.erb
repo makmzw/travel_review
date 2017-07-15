@@ -1,0 +1,7 @@
+<h1>温泉検索結果</h1>
+
+<% @onsens.each do |onsen| %>
+  <%= onsen['OnsenName'],hotel_reviews_path %>
+  <%= link_to'詳細はコチラ', onsen['OnsenAreaURL'] %>	
+  <br>
+<% end %>

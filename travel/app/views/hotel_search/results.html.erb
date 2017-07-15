@@ -1,0 +1,8 @@
+<h1>ホテル検索結果</h1>
+
+<% @hotels.each do |hotel| %>
+  <%= link_to hotel['HotelName'], hotel_reviews_path(code: hotel['HotelID']) %>
+  <img src="<%= hotel['PictureURL'] %>">
+  <%= link_to '詳細はコチラ（外部リンク）', hotel['HotelDetailURL'] %>	
+  <br>
+<% end %>
